@@ -1,35 +1,13 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>ADHS-CHAT</title>
-  <!--https://cdn.firebase.com/js/client/2.4.0/firebase.js-->
-  <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase.js"></script>
-  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
-  <link rel="stylesheet" type="text/css" href="https://www.firebase.com/css/example.css">
-  </head>
+<script type="text/javascript" src="js.js"></script>
+</head>
 <body>
 <center>
-
-<h1>Welcome to ADHS-CHAT Server 1</h1>
-
-<div id='messagesDiv'></div>
-<input type='text' id='nameInput' placeholder='Name'>
-<input type='text' id='messageInput' placeholder='Message...'>
-<script type='text/javascript'>
-  var messagesRef = new Firebase('https://adhs-chat.firebaseio.com/chat/');
-  $('#messageInput').keypress(function (e) {
-    if (e.keyCode == 13) {
-      var author = $('#nameInput').val();
-      var message = $('#messageInput').val();
-      messagesRef.push({author:author, message:message});
-      $('#messageInput').val('');
-    }
-  });
-  messagesRef.on('child_added', function (snapshot) {
-    var message = snapshot.val();
-    $('<div/>').text(message.message).prepend($('<em/>').text(message.author+': ')).appendTo($('#messagesDiv'));
-    $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
-  });
-</script>
-<p>Copyright &copy 2016 Tim Sayers. All Rights Reserved.</p>
+<input type='text' id='wInput' placeholder='Width'>
+<input type='text' id='hInput' placeholder='Height'>
+<p id="text"></p>
+<button onclick="calculate()">Calculate!</button>
 </body>
 </html>
