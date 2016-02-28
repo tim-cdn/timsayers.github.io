@@ -13,7 +13,23 @@
 <body>
 <div id='messagesDiv'></div>
 <input type='text' id='messageInput' placeholder='Message...'>
+<button type="button" onclick="send()">Send!</button>
 <script type='text/javascript'>
+function send(){
+   var messagesRef = new Firebase('https://adhs-chat.firebaseio.com/chat/');
+  var username = "User"
+      var message = $('#messageInput').val();
+      messagesRef.push({author:username, message:message});
+      $('#messageInput').val('');
+
+  messagesRef.on('child_added', function (snapshot) {
+    var message = snapshot.val();
+    $('<div/>').text(message.message).prepend($('<em/>').text(message.author+': ')).appendTo($('#messagesDiv'));
+    $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+  });
+
+}
+}
   var messagesRef = new Firebase('https://adhs-chat.firebaseio.com/chat/');
   var username = "User"
   $('#messageInput').keypress(function (e) {
