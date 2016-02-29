@@ -8,8 +8,13 @@ FRI: 35°|17° || SAT: 36°|18°
 [Version 1.1 Beta]
 + Fixed Bugs and Performance issues.
           
-
 [Version 1.2 Beta]
 + Added News.
 + Device Info
 + Get Help via Email.
+
+
+
+
+
+
