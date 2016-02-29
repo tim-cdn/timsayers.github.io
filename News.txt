@@ -4,5 +4,12 @@ MON: 26°|16° || TUE: 32°|15°
 WED: 34°|17° || THU: 35°|17°
 FRI: 35°|17° || SAT: 36°|18°
             SUN: 35°|17°
+[APP CHANGELOG]
+[Version 1.1 Beta]
++ Added News.
++ Device Info
++ Get Help via Email.
++ Fixed Bugs and Performance issues.
+          
 
         
