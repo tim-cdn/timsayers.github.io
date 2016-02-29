@@ -6,10 +6,10 @@ FRI: 35°|17° || SAT: 36°|18°
             SUN: 35°|17°
 [APP CHANGELOG]
 [Version 1.1 Beta]
-+ Added News.
-+ Device Info
-+ Get Help via Email.
 + Fixed Bugs and Performance issues.
           
 
-        
+[Version 1.2 Beta]
++ Added News.
++ Device Info
++ Get Help via Email.
