@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AGE!</title>
+ <script type="text/javascript" src="age.js"></script>
+ <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+ </head>
+ 
+ <body>
+ <center>
+ <h1>AGE!</h1>
+<input type='text' id='age' placeholder='Your Age!'>
+<p id="response"></p>
+<p id="youcan"></p>
+<button onclick="onClick()">Click Me</button>
+<p></p>
+<form id="myForm">
+<input type="radio" name="radioName" value="1" /> Circle <br />
+<input type="radio" name="radioName" value="2" /> Background <br />
+<p></p>
+<canvas id="myCanvas" width="200" height="200" style="border:1px solid #FFFFFF;">
+</canvas>
+ </center>
+ <script type='text/javascript'>
+  $('#age').keypress(function (e) {
+    if (e.keyCode == 13) {
+     onClick();
+    }
+  });
+  </script>
+ </body>
+ </html>
