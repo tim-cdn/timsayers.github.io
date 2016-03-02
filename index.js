@@ -1,11 +1,9 @@
-var Div = document.getElementById('gp');
-function hideGP(){
-    Div.setAttribute('class', 'hidden');
-    $(".gp").hide();
-    document.getElementById("gp").style.visibility = "hidden";
-}
-function showGP(){
-    Div.setAttribute('class', 'show');
-    $(".gp").show();
-    document.getElementById("gp").style.visibility = "visible";
-}
+ 
+ function toggle_visibility(id) 
+    {
+        var e = document.getElementById(id);
+        if ( e.style.display == 'block' )
+            e.style.display = 'none';
+        else
+            e.style.display = 'block';
+    }
